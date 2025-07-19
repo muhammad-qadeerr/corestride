@@ -27,14 +27,15 @@ const CardAbout = () => {
               Mission
             </h1>
             <p className="text-base text-neutral-800 dark:text-neutral-300 mt-5 ">
-              At CoreStride Labs, our mission is to revolutionize the software development
-              landscape by delivering innovative, custom solutions that empower businesses
-              to achieve their full potential. We strive to create cutting-edge, scalable
-              software that solves complex challenges, enabling organizations to thrive
-              in the digital age. With a commitment to excellence and technological
-              innovation, we aim to be the trusted partner behind our clients' digital
-              transformation and success.
-            </p>
+  At CoreStride Labs, our mission is to revolutionize the software development
+  landscape by delivering innovative, custom solutions that empower businesses
+  to achieve their full potential. We strive to create cutting-edge, scalable
+  software that solves complex challenges, enabling organizations to thrive
+  in the digital age. With a commitment to excellence and technological
+  innovation, we aim to be the trusted partner behind our clients&apos; digital
+  transformation and success.
+</p>
+
           </div>
         </div>
       </ComponentTransition>

@@ -41,7 +41,7 @@ export const BlogContent = [
           Layered architecture organizes code into horizontal layers, each with specific 
           responsibilities. Common layers include presentation, business logic, data access, 
           and infrastructure. This pattern promotes separation of concerns, making applications 
-          easier to understand, test, and maintain. It's particularly suitable for enterprise 
+          easier to understand, test, and maintain. It&apos;s particularly suitable for enterprise 
           applications with complex business logic.
         </p>
         <h1 className="text-3xl py-3 font-bold">Domain-Driven Design (DDD)</h1>
@@ -150,7 +150,7 @@ export const BlogContent = [
           Understanding ML Integration Requirements
         </h1>
         <p className="pb-5 leading-relaxed">
-          Before integrating machine learning into your application, it's crucial to 
+          Before integrating machine learning into your application, it&apos;s crucial to 
           understand the specific requirements and use cases. Identify the problems 
           ML can solve for your users, assess data availability and quality, and 
           determine the computational resources needed. Consider whether you need 

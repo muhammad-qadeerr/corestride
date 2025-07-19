@@ -142,9 +142,10 @@ const Card = () => {
         Scalable Software for Large Organizations!
         </h2>
         <p className="text-sm text-neutral-700 line-clamp-2 dark:text-neutral-400 mt-3">
-        Build enterprise-grade software solutions that scale with your organization's 
-        growth and handle complex business requirements with ease.
-        </p>
+  Build enterprise-grade software solutions that scale with your organization&apos;s 
+  growth and handle complex business requirements with ease.
+</p>
+
       </ComponentTransition>
 
       <ComponentTransition
@@ -174,7 +175,7 @@ const Card = () => {
         </h2>
         <p className="text-sm text-neutral-700 line-clamp-2 dark:text-neutral-400 mt-3">
         Get expert consultation on technology strategy, digital transformation, 
-        and software architecture to ensure your project's success
+        and software architecture to ensure your project&apos;s success
         </p>
       </ComponentTransition>
     </div>
