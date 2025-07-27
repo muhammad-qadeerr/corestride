@@ -6,11 +6,9 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { NavigationItem } from "@/common/constant/NavigationItem";
 import { usePathname } from "next/navigation";
-import dynamic from "next/dynamic";
 import { ButtonSpot } from "../element/ButtonSpot";
 import DarkmodeSwitch from "../element/DarkmodeSwitch";
 import { useLoading } from "@/common/context/LoadingContext";
-
 // const Logos = dynamic(() => import('./Logo'), {
 //   ssr: false
 // })
@@ -91,9 +89,9 @@ const Navbar = () => {
           <div className="px-2">
             <DarkmodeSwitch />
           </div>
-          <div onClick={() => startNavigation()}>
+          <Link href="/contact" onClick={() => startNavigation()}>
             <ButtonSpot title="Let's Talk" />
-          </div>
+          </Link>
         </div>
       </div>
     </motion.div>

@@ -11,14 +11,18 @@ import Button from "@/common/component/element/Button";
 const Blog = () => {
   return (
     <div className="h-auto max-w-[1500px]  px-10 xl:px-20 pb-20">
-      <ComponentTransition className="flex justify-center py-5">
-        <SectionHeading title="Tech News" icon={<IoNewspaperOutline  size={30} />} />
+      <ComponentTransition className="flex justify-center py-5 mt-8">
+        <div className="flex items-center gap-2 px-4 py-2 border border-black rounded-full">
+          <IoNewspaperOutline size={20} className="text-black" />
+          <span className="text-black font-medium">Tech News</span>
+        </div>
       </ComponentTransition>
       <ComponentTransition delay={0.1} className="flex justify-center items-center flex-col">
-        <h1 className="text-3xl md:text-5xl py-5 text-center bg-clip-text dark:bg-gradient-to-r from-white from-50% to-[#8f8f8f] bg-text md:w-[50%] text-transparent font-bold">
-          Our Blog & News
+        <h1 className="text-3xl md:text-5xl py-5 text-center font-bold">
+          <span className="text-black">Our</span>{" "}
+          <span className="text-gray-600">Blog & News</span>
         </h1>
-        <p className="text-base md:text-2xl text-neutral-500 dark:text-neutral-300 md:w-[50%] text-center">
+        <p className="text-base md:text-2xl text-gray-500 md:w-[50%] text-center">
           We share essential insights from the technology sector, AI, and the
           world of software development.
         </p>

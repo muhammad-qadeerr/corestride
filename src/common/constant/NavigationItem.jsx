@@ -1,5 +1,3 @@
-
-
 export const NavigationItem = [
     {
         src: '/',
@@ -12,6 +10,10 @@ export const NavigationItem = [
     {
         src: '/solution',
         title: 'Solutions'
+    },
+    {
+        src: '/case-studies',
+        title: 'Case Studies'
     },
     {
         src: '/about',
