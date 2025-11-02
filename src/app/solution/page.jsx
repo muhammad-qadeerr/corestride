@@ -2,8 +2,8 @@ import SolutionPage from '@/common/module/Solution/component/SolutionPage'
 import React from 'react'
 
 export const metadata = {
-  title: 'Solutions - CoreStride Labs',
-  description: 'Custom software solutions and digital transformation services by CoreStride Labs',
+  title: 'Solution - Corestride Labs',
+  description: 'Solution',
   
 }
 
