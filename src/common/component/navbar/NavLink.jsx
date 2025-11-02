@@ -78,8 +78,6 @@ export const Links = ({ heading, imgSrc, subheading, href,pathname }) => {
         </motion.span>
       </div>
 
-
-
       <motion.div
         variants={{
           initial: {
