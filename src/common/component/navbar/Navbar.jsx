@@ -89,7 +89,7 @@ const Navbar = () => {
           <div className="px-2">
             <DarkmodeSwitch />
           </div>
-          <Link href="/contact" onClick={() => startNavigation()}>
+          <Link href="https://calendar.app.google/vUGja5MThknGhY5A7" target="_blank" rel="noopener noreferrer">
             <ButtonSpot title="Let's Talk" />
           </Link>
         </div>

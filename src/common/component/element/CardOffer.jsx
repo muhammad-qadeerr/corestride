@@ -23,9 +23,6 @@ export default function CardOffer({title, className = ''}) {
           <Link href="/contact">
             <ButtonSpot title="Hire Us" />
           </Link>
-          <Link href="/contact">
-            <ButtonSpot title="Book A Meeting" />
-          </Link>
         </div>
       </div>
       <div className="absolute  z-[-9] glowbg w-[100%] md:w-[600px] h-[400px] top-[50px]"></div>

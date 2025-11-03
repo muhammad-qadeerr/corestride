@@ -11,6 +11,7 @@ import { Parallax } from "@/common/constant/Parallax";
 import H1 from "@/common/component/element/H1";
 import { ButtonSpot } from "@/common/component/element/ButtonSpot";
 import { useLoading } from "@/common/context/LoadingContext";
+import Link from "next/link";
 
 export const translateVariantText = {
   initial: {
@@ -88,10 +89,12 @@ const Hero = () => {
             transition={{ duration: 0.4, delay: 0.3 }}
             className="flex max-md:flex-col w-full items-center justify-center gap-5 py-5"
           >
-            <ButtonSpot
-              title="Get Started"
-              className="!rounded-md !w-auto !py-2"
-            />
+            <Link href="/contact">
+              <ButtonSpot
+                title="Get Started"
+                className="!rounded-md !w-auto !py-2"
+              />
+            </Link>
           </motion.div>
         </div>
 
