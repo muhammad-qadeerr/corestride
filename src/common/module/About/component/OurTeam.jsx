@@ -15,19 +15,19 @@ export default function OurTeam() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-content-center place-items-center gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 place-content-center place-items-center gap-6 mt-8">
           <div className="group">
             <Image
               alt="Team member"
               className="mx-auto max-w-full aspect-[1/1] h-auto overflow-hidden rounded-full object-cover object-center sm:w-full group-hover:scale-105 transition-transform"
               height={200}
-              src="https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/qadeer.jpeg"
               width={200}
               priority
             />
             <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium">John Doe</h3>
-              <p className="text-neutral-700 dark:text-neutral-300 ">CEO</p>
+              <h3 className="text-lg font-medium">Muhammad Qadeer</h3>
+              <p className="text-neutral-700 dark:text-neutral-300 ">Founder/CTO</p>
             </div>
           </div>
           <div className="group">
@@ -35,27 +35,13 @@ export default function OurTeam() {
               alt="Team member"
               className="mx-auto aspect-[1/1] h-auto overflow-hidden rounded-full object-cover object-center sm:w-full group-hover:scale-105 transition-transform"
               height={200}
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/daniel.jpg"
               width={200}
               priority
             />
             <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium">Jane Smith</h3>
-              <p className="text-neutral-700 dark:text-neutral-300">CTO</p>
-            </div>
-          </div>
-          <div className="group ">
-            <Image
-              alt="Team member"
-              className="mx-auto aspect-[1/1] max-w-full h-auto overflow-hidden rounded-full object-cover object-center sm:w-full group-hover:scale-105 transition-transform"
-              height={200}
-              src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              width={200}
-              priority
-            />
-            <div className="mt-4 text-center">
-              <h3 className="text-lg font-medium">Robert Johnson</h3>
-              <p className="text-neutral-700 dark:text-neutral-300 ">CFO</p>
+              <h3 className="text-lg font-medium">Daniel Kibet</h3>
+              <p className="text-neutral-700 dark:text-neutral-300">Co-Founder & CEO</p>
             </div>
           </div>
         </div>
