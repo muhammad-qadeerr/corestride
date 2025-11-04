@@ -87,10 +87,10 @@ export default function CaseStudiesPage() {
                  
                  {/* View in Detail Link */}
                  <div className="mb-4">
-                   <a
-                     href={`/case-studies/${item.slug}`}
-                     className="text-blue-500 hover:text-blue-600 underline font-medium transition-colors"
-                   >
+                 <a
+                    href={`/case-studies/${item.slug}`}
+                    className="text-white underline underline-offset-4 decoration-2 decoration-neutral-500 hover:decoration-white transition-colors"
+                  >
                      View in Detail
                    </a>
                  </div>
