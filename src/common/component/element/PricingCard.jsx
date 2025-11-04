@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ComponentTransition from "./ComponentTransition";
 import { FaCheck } from "react-icons/fa";
@@ -5,6 +6,7 @@ import Buttons from "./Buttons";
 import { PricingItem } from "@/common/constant/PricingItem";
 import clsx from "clsx";
 import { ButtonSpot } from "./ButtonSpot";
+import Link from "next/link";
 
 export default function PricingCard() {
   return (
@@ -32,9 +34,11 @@ export default function PricingCard() {
               </span>
               </h1>
             </div>
-            <div className="text-sm text-center text-gray-500 dark:text-gray-400">
-              
-            </div>
+            {item.duration && (
+              <div className="text-sm text-center text-gray-500 dark:text-gray-400">
+                Timeline: {item.duration}
+              </div>
+            )}
             <ul className="grid gap-2 py-4">
               <li>
                 <FaCheck className="mr-2 inline-block h-4 w-4" />
@@ -51,7 +55,9 @@ export default function PricingCard() {
             </ul>
           </div>
           <div className="w-full flex justify-center items-center">
-            <ButtonSpot className="w-full" title="Choose Plan" />
+            <Link href={`/contact?plan=${encodeURIComponent(item.plan)}`} className="w-full">
+              <ButtonSpot className="w-full" title="Choose Plan" />
+            </Link>
           </div>
         </ComponentTransition>
       ))}

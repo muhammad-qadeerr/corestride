@@ -1,12 +1,60 @@
 "use client";
 import clsx from "clsx";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
+
+// Pricing details for message generation
+const pricingDetails = {
+  Starter: {
+    price: "$1K-$2K",
+    duration: "2-4 weeks",
+    description: "Small projects, website redesign, API integration"
+  },
+  Pro: {
+    price: "$5K-$10K",
+    duration: "8-12 weeks",
+    description: "Custom web apps, mobile apps, AI features"
+  },
+  Enterprise: {
+    price: "$11K-$20K+",
+    duration: "12-24 weeks",
+    description: "Full-scale solutions, DevOps, ongoing support"
+  }
+};
 
 const ContactForm = () => {
   const formRef = useRef(null);
+  const messageRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
+  
+  // Get plan from URL params and populate message
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const selectedPlan = params.get("plan");
+
+      // Generate message when plan is selected
+      if (selectedPlan && messageRef.current && pricingDetails[selectedPlan]) {
+        const plan = pricingDetails[selectedPlan];
+        const message = `Hi,
+
+I'm interested in the ${selectedPlan} plan and would like to discuss this further.
+
+Plan Details:
+- Plan: ${selectedPlan}
+- Price Range: ${plan.price} (negotiable based on project scope)
+- Timeline: ${plan.duration}
+- Description: ${plan.description}
+
+I understand that pricing is negotiable based on project requirements and scope. I would like to discuss how this plan can help meet my project requirements and explore the pricing options that work best for my budget.
+
+Looking forward to hearing from you!`;
+        
+        messageRef.current.value = message;
+      }
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -58,6 +106,7 @@ const ContactForm = () => {
           />
         </div>
         <textarea
+          ref={messageRef}
           className="w-full py-2 px-3 rounded-md border dark:bg-neutral-900 bg-neutral-200 border-neutral-200 focus:outline-none dark:border-neutral-700"
           rows={5}
           placeholder="Message"

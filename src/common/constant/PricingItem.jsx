@@ -3,37 +3,40 @@
 
 export const PricingItem = [
     {
-        plan: 'Free',
-        desc: 'For Simple personal project',
-        price: '$0',
-        payTime: ' / mo',
+        plan: 'Starter',
+        desc: 'Small projects, website redesign, API integration',
+        price: '$1K-$2K',
+        payTime: '',
+        duration: '2-4 weeks',
         benefit: {
-            1: 'Unlimited access to all features',
-            2: "Priority customer support",
-            3: 'Free access to new features',
+            1: 'Small projects & website redesign',
+            2: "API integration services",
+            3: '2-4 weeks delivery timeline',
         }
     },
     {
         plan: 'Pro',
-        desc: 'For small team and propessional',
-        price: '$49.99',
+        desc: 'Custom web apps, mobile apps, AI features',
+        price: '$5K-$10K',
         recommended: 'Recommended',
-        payTime: ' / mo',
+        payTime: '',
+        duration: '8-12 weeks',
         benefit: {
-            1: 'Unlimited access to all features',
-            2: "Priority customer support",
-            3: 'Free access to new features',
+            1: 'Custom web & mobile applications',
+            2: "AI features integration",
+            3: '8-12 weeks delivery timeline',
         }
     },
     {
-        plan: 'Premium',
-        desc: 'For large agency and business',
-        price: '$100.99',
-        payTime: ' / mo',
+        plan: 'Enterprise',
+        desc: 'Full-scale solutions, DevOps, ongoing support',
+        price: '$11K-$20K+',
+        payTime: '',
+        duration: '12-24 weeks',
         benefit: {
-            1: 'Unlimited access to all features',
-            2: "Priority customer support",
-            3: 'Free access to new features',
+            1: 'Full-scale enterprise solutions',
+            2: "DevOps & ongoing support",
+            3: '12-24 weeks delivery timeline',
         }
     },
 ]

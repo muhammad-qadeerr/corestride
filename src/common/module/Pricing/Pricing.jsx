@@ -1,8 +1,6 @@
-import Button from '@/common/component/element/Button'
 import ComponentTransition from '@/common/component/element/ComponentTransition'
 import PricingCard from '@/common/component/element/PricingCard'
 import SectionHeading from '@/common/component/element/SectionHeading'
-import Link from 'next/link'
 import React from 'react'
 import { AiFillSliders } from 'react-icons/ai'
 
@@ -26,14 +24,11 @@ export default function Pricing() {
 
       <PricingCard />
 
-    <ComponentTransition className="w-full md:flex-row flex-col items-center flex justify-center gap-3">
-      <Link href="/solution" className="w-full rounded-full">
-        <Button
-          title="View All Solution"
-          className="hover:!bg-neutral-950 hover:dark:!bg-neutral-100 transition-colors !rounded-full duration-300 overflow-hidden !bg-transparent outline outline-1 dark:outline-white outline-neutral-950 dark:!text-white !text-black w-full py-5"
-        />
-      </Link>
-    </ComponentTransition>
+      <ComponentTransition delay={0.2} className="flex justify-center items-center mt-8">
+        <p className="text-base md:text-lg text-center text-neutral-600 dark:text-neutral-400 italic">
+          * All pricing is negotiable based on project requirements and scope. Contact us to discuss your specific needs.
+        </p>
+      </ComponentTransition>
   </div>
   )
 }

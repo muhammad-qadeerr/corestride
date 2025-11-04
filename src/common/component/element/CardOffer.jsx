@@ -21,7 +21,7 @@ export default function CardOffer({title, className = ''}) {
         </h1>
         <div className="w-full flex flex-col items-center md:flex-row justify-center gap-3">
           <Link href="/contact">
-            <ButtonSpot title="Hire Us" />
+            <ButtonSpot title="Let's Get Started With Us" />
           </Link>
         </div>
       </div>
