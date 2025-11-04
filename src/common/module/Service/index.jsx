@@ -14,7 +14,7 @@ import { useLoading } from "@/common/context/LoadingContext";
 const Service = () => {
   const { startNavigation } = useLoading();
   return (
-    <div className="h-auto max-w-[1500px]  px-10 xl:px-20 pb-20">
+    <div id="services" className="h-auto max-w-[1500px]  px-10 xl:px-20 pb-20">
       <div>
       <motion.div
         className="flex justify-center py-5"

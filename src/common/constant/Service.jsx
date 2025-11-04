@@ -17,8 +17,8 @@ export const Services = [
         
       />
     ),
-    title: "Is there a free trial available?",
-    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, repellat. Praesentium consectetur repellendus harum provident ad. Ducimus, ad consectetur? Distinctio inventore ad velit nihil debitis sapiente ipsum doloremque quaerat consectetur.",
+    title: "What services does CoreStride Labs offer?",
+    desc: "CoreStride Labs provides comprehensive software development services including custom software development, web and mobile applications, cloud infrastructure & DevOps, API development & integration, data analytics & business intelligence, and AI & machine learning solutions. We offer end-to-end solutions tailored to your business needs.",
   },
   {
     icon: (
@@ -27,8 +27,8 @@ export const Services = [
         className="group-hover:rotate-90 transition-all duration-300"
       />
     ),
-    title: "Can I change my plan later?",
-    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, repellat. Praesentium consectetur repellendus harum provident ad. Ducimus, ad consectetur? Distinctio inventore ad velit nihil debitis sapiente ipsum doloremque quaerat consectetur.",
+    title: "How long does a typical software development project take?",
+    desc: "Project timelines vary based on complexity, scope, and requirements. A simple web application might take 2-4 months, while enterprise-level solutions can take 6-12 months or longer. We provide detailed project timelines during our initial consultation and break down projects into manageable phases with clear milestones.",
   },
   {
     icon: (
@@ -37,8 +37,28 @@ export const Services = [
         className="group-hover:rotate-90 transition-all duration-300"
       />
     ),
-    title: "What is your cancellation policy?",
-    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, repellat. Praesentium consectetur repellendus harum provident ad. Ducimus, ad consectetur? Distinctio inventore ad velit nihil debitis sapiente ipsum doloremque quaerat consectetur.",
+    title: "Do you provide ongoing support and maintenance after project completion?",
+    desc: "Yes, we offer comprehensive post-launch support and maintenance services. This includes bug fixes, security updates, performance optimization, feature enhancements, and technical support. We offer flexible maintenance packages to ensure your software remains up-to-date and performs optimally.",
+  },
+  {
+    icon: (
+      <FaPager
+        size={size}
+        className="group-hover:rotate-90 transition-all duration-300"
+      />
+    ),
+    title: "What technologies and frameworks do you use?",
+    desc: "We work with a wide range of modern technologies including React, Next.js, Node.js, Python, Java, .NET, Flutter, React Native, AWS, Azure, Docker, Kubernetes, and various AI/ML frameworks. We choose the best technology stack based on your project requirements, scalability needs, and business objectives.",
+  },
+  {
+    icon: (
+      <FaPiedPiper
+        size={size}
+        className="group-hover:rotate-90 transition-all duration-300"
+      />
+    ),
+    title: "How do you ensure the security and quality of the software you develop?",
+    desc: "Security and quality are top priorities. We follow industry best practices including secure coding standards, regular security audits, automated testing (unit, integration, e2e), code reviews, and compliance with relevant standards (GDPR, SOC 2, etc.). We also conduct thorough QA testing and provide detailed documentation for all deliverables.",
   },
 ];
 

@@ -8,12 +8,14 @@ import Feedback from '../Feedback'
 import Feature from '../Feature/Feature'
 import Pricing from '../Pricing/Pricing'
 import Interest from '../EndSection/Interest'
+import Stats from '../Stats'
 
 const Homepage = () => {
   return (
     <div>
       <Hero />
       <Feature />
+      <Stats />
       <Service />
       <Solution />
       <Pricing/>

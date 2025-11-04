@@ -17,7 +17,16 @@ const Navbar = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scroll, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const { startNavigation } = useLoading();
+
+  // Map section IDs to navigation paths
+  const sectionToPathMap = {
+    home: "/",
+    services: "/services",
+    solution: "/solution",
+    blog: "/blog",
+  };
 
   const handleOpen = () => {
     setOpen(!open);
@@ -26,11 +35,91 @@ const Navbar = () => {
   const close = () => {
     setOpen(false);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrolled(window.scrollY > 10);
     });
   }, []);
+
+  // Scroll-based active navigation
+  useEffect(() => {
+    // Only run on home page
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
+    const sections = ["home", "services", "solution", "blog"];
+    
+    // Function to find the most visible section
+    const findActiveSection = () => {
+      let currentSection = "home";
+      const windowHeight = window.innerHeight;
+      const viewportCenter = windowHeight / 2;
+      let closestDistance = Infinity;
+
+      // If we're near the top, default to home
+      if (window.scrollY < 200) {
+        setActiveSection("home");
+        return;
+      }
+
+      sections.forEach((sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (!element) return;
+
+        const rect = element.getBoundingClientRect();
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
+        const sectionCenter = (sectionTop + sectionBottom) / 2;
+
+        // Check if viewport center is within this section
+        if (viewportCenter >= sectionTop && viewportCenter <= sectionBottom) {
+          // Viewport center is in this section - this is the active one
+          const distance = Math.abs(viewportCenter - sectionCenter);
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            currentSection = sectionId;
+          }
+        } else {
+          // Calculate distance from viewport center to section center
+          const distance = Math.abs(viewportCenter - sectionCenter);
+          if (distance < closestDistance && sectionTop < windowHeight && sectionBottom > 0) {
+            closestDistance = distance;
+            currentSection = sectionId;
+          }
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    // Throttle scroll handler for better performance
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          findActiveSection();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    // Initial check after a delay to ensure DOM is ready
+    const timeoutId = setTimeout(() => {
+      findActiveSection();
+    }, 100);
+
+    // Add scroll listener
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeoutId);
+    };
+  }, [pathname]);
 
   return (
     <motion.div
@@ -57,25 +146,33 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="lg:flex hidden justify-center gap-10 items-center w-full">
-          {NavigationItem.map((item, index) => (
-            <Link
-              href={item.src}
-              className="group  flex justify-center gap-5 items-center  relative"
-              key={index}
-              onClick={() => startNavigation()}
-            >
-              <h1 className="text-base font-medium text-black dark:text-white line-clamp-1">
-                {item.title}
-              </h1>
-              <div
-                className={clsx(
-                  pathname === item.src
-                    ? "absolute top-[23px] h-[2px] flex items-center w-[50%]  bg-[#000] dark:bg-white  transition-transform duration-300 "
-                    : "absolute top-[23px] h-[2px] w-[0%]  bg-[#000] dark:bg-white  transition-all duration-300 group-hover:w-[50%]"
-                )}
-              ></div>
-            </Link>
-          ))}
+          {NavigationItem.map((item, index) => {
+            // Determine if this nav item should be active
+            const isActive =
+              pathname === "/"
+                ? sectionToPathMap[activeSection] === item.src
+                : pathname === item.src;
+
+            return (
+              <Link
+                href={item.src}
+                className="group  flex justify-center gap-5 items-center  relative"
+                key={index}
+                onClick={() => startNavigation()}
+              >
+                <h1 className="text-base font-medium text-black dark:text-white line-clamp-1">
+                  {item.title}
+                </h1>
+                <div
+                  className={clsx(
+                    isActive
+                      ? "absolute top-[23px] h-[2px] flex items-center w-[50%]  bg-[#000] dark:bg-white  transition-transform duration-300 "
+                      : "absolute top-[23px] h-[2px] w-[0%]  bg-[#000] dark:bg-white  transition-all duration-300 group-hover:w-[50%]"
+                  )}
+                ></div>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="lg:hidden flex  items-center">

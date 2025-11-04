@@ -6,7 +6,7 @@ import ComponentTransition from "@/common/component/element/ComponentTransition"
 
 const Faq = () => {
   return (
-    <div className="h-auto max-w-[1500px]  px-10 xl:px-20 pb-20">
+    <div className="h-auto max-w-[1500px]  px-10 xl:px-20 pb-10">
       <ComponentTransition className="flex justify-center py-5">
         <SectionHeading
           title="Knowledge Base"
@@ -18,8 +18,7 @@ const Faq = () => {
           FAQ & Documentation
         </h1>
         <p className="text-base md:text-2xl text-neutral-500 dark:text-neutral-300 md:w-[50%] text-center">
-          Teaser name provides customers complete entry to knowledge base API and
-          documentation.
+          CoreStride Labs provides comprehensive answers to frequently asked questions about our software development services and solutions.
         </p>
       </ComponentTransition>
       <CardFaq />

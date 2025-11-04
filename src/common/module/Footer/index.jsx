@@ -63,7 +63,7 @@ const Footer = () => {
           <FaDiscord size={30} />
         </div>
         <div className="flex flex-col">
-          <h1 className="text-sm">© 2024 CoreStride Labs. All Rights Reserved.</h1>
+          <h1 className="text-sm">© 2025 CoreStride Labs. All Rights Reserved.</h1>
           <h1 className="text-sm">
             Crafted with precision and innovation by{" "}
             <span className="font-bold">CoreStride Labs</span>.

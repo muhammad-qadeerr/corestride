@@ -10,7 +10,7 @@ import Button from "@/common/component/element/Button";
 
 const Blog = () => {
   return (
-    <div className="h-auto max-w-[1500px]  px-10 xl:px-20 pb-20">
+    <div id="blog" className="h-auto max-w-[1500px]  px-10 xl:px-20 pb-20">
       <ComponentTransition className="flex justify-center py-5 mt-8">
         <div className="flex items-center gap-2 px-4 py-2 border border-black rounded-full">
           <IoNewspaperOutline size={20} className="text-black" />

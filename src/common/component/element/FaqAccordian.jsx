@@ -18,7 +18,7 @@ export default function FaqAccordian() {
     };
 
   return (
-    <ComponentTransition className="flex  rounded-3xl pb-20 justify-center mt-10 items-center flex-col">
+    <ComponentTransition className="flex  rounded-3xl pb-5 justify-center mt-10 items-center flex-col">
     {Services.map((item, index) => (
       <div key={index} className="flex  justify-center items-center flex-col mt-10 relative  border-b-[1px] border-neutral-400 pb-5">
         <button onClick={() => handleClick(index)} className="w-full">

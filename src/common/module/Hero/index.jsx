@@ -55,7 +55,7 @@ const Hero = () => {
   const shouldAnimate = !isLoading && !isNavigating;
 
   return (
-    <div className="h-auto md:mb-20 max-w-[1500px] px-5 lg:px-10 mt-20 relative overflow-hidden">
+    <div id="home" className="h-auto md:mb-20 max-w-[1500px] px-5 lg:px-10 mt-20 relative overflow-hidden">
       <div className="flex flex-col justify-center md:top-0 mt-28 lg:mt-36  items-center">
         <div className="flex flex-col items-center justify-center">
           <motion.div 
@@ -91,7 +91,7 @@ const Hero = () => {
           >
             <Link href="/contact">
               <ButtonSpot
-                title="Get Started"
+                title="Get a Quote"
                 className="!rounded-md !w-auto !py-2"
               />
             </Link>
