@@ -31,7 +31,7 @@ export default function ServicePage() {
         </p>
       </div>
       <Card />
-      
+
       {/* Who We Work With Section */}
       <div className="py-20">
         <ComponentTransition className="text-center mb-16">
@@ -70,8 +70,8 @@ export default function ServicePage() {
               description: "Developing innovative financial technology applications and platforms."
             }
           ].map((item, index) => (
-            <ComponentTransition 
-              key={index} 
+            <ComponentTransition
+              key={index}
               delay={index * 0.1}
               className="p-8 rounded-2xl bg-white dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 hover:shadow-lg transition-all duration-300"
             >
@@ -91,11 +91,11 @@ export default function ServicePage() {
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-neutral-500 dark:text-neutral-300 mb-10 max-w-2xl mx-auto">
-            Let's discuss how we can help you achieve your business goals.
+            Let&apos;s discuss how we can help you achieve your business goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="w-full sm:w-auto"
             >
               <Button

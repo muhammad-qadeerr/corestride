@@ -8,39 +8,36 @@ export const ButtonSpot = ({title, className}) => {
   const btnRef = useRef(null);
   const spanRef = useRef(null);
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const { width } = e.target.getBoundingClientRect();
-      const offset = e.offsetX;
-      const left = `${(offset / width) * 100}%`;
-  
-      spanRef.current.animate({ left }, { duration: 250, fill: "forwards" });
-    };
-  
-    const handleMouseLeave = () => {
-      spanRef.current.animate(
-        { left: "50%" },
-        { duration: 100, fill: "forwards" }
-      );
-    };
-  
-    const btn = btnRef.current;
-  
+useEffect(() => {
+  const handleMouseMove = (e) => {
+    const { width } = e.target.getBoundingClientRect();
+    const offset = e.offsetX;
+    const left = `${(offset / width) * 100}%`;
+    spanRef.current.animate({ left }, { duration: 250, fill: "forwards" });
+  };
+
+  const handleMouseLeave = () => {
+    spanRef.current.animate(
+      { left: "50%" },
+      { duration: 100, fill: "forwards" }
+    );
+  };
+
+  const btn = btnRef.current;
+
+  if (btn) {
+    btn.addEventListener("mousemove", handleMouseMove);
+    btn.addEventListener("mouseleave", handleMouseLeave);
+  }
+
+  return () => {
     if (btn) {
-      btn.addEventListener("mousemove", handleMouseMove);
-      btn.addEventListener("mouseleave", handleMouseLeave);
+      btn.removeEventListener("mousemove", handleMouseMove);
+      btn.removeEventListener("mouseleave", handleMouseLeave);
     }
-  
-    return () => {
-      const btn = btnRef.current;
-  
-      if (btn) {
-        btn.removeEventListener("mousemove", handleMouseMove);
-        btn.removeEventListener("mouseleave", handleMouseLeave);
-      }
-    };
-  }, []);
-  
+  };
+}, []);
+
 
   return (
     <motion.button
