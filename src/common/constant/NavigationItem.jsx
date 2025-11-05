@@ -8,12 +8,12 @@ export const NavigationItem = [
         title: 'Services'
     },
     {
-        src: '/solution',
-        title: 'Solutions'
-    },
-    {
         src: '/case-studies',
         title: 'Case Studies'
+    },
+    {
+        src: '/distinct-offerings',
+        title: 'Distinct Offerings'
     },
     {
         src: '/about',

@@ -98,14 +98,16 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className=" absolute w-[90%] top-[20%] h-[300px] z-[-99] ">
+        {/* Images section temporarily removed - can be re-enabled later if needed */}
+        {/* <div className=" absolute w-[90%] top-[20%] h-[300px] z-[-99] ">
           <Rails />
           <div className="bg-gradient-to-b from-white dark:from-black from-20% to-transparent absolute inset-0 "></div>
           <div className="bg-gradient-to-l from-white dark:from-black from-1% to-transparent to-30% absolute inset-0"></div>
           <div className="bg-gradient-to-r from-white dark:from-black from-1% to-transparent to-30% absolute inset-0"></div>
           <div className="bg-gradient-to-t from-white dark:from-black from-1% to-transparent to-30% absolute inset-0"></div>
-        </div>
+        </div> */}
 
+        {/* Hero images carousel - temporarily disabled
         <motion.div
           className="w-[100%] h-full xl:mt-10 mt-32 sm:mt-28 flex gap-1 lg:px-10 overflow-hidden "
           style={{
@@ -122,7 +124,7 @@ const Hero = () => {
             <ComponentTransition
               delay={shouldAnimate ? index * 0.05 : 0}
               key={index}
-              className=" overflow-hidden rounded-xl w-full"
+              className="overflow-hidden rounded-xl w-full"
               shouldAnimate={shouldAnimate}
             >
               <Image
@@ -135,7 +137,7 @@ const Hero = () => {
               />
             </ComponentTransition>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* <ImgScale /> */}
       </div>
